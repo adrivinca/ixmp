@@ -1,4 +1,7 @@
-from pathlib import Path
+try:
+    from pathlib import Path
+except:
+    from pathlib2 import Path
 import shutil
 
 import pandas as pd
