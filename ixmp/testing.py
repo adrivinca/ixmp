@@ -1,3 +1,4 @@
+from pathlib import Path
 import shutil
 
 import pandas as pd
@@ -112,7 +113,7 @@ def dantzig_transport(mp, solve=False):
 
     if solve:
         # Solve the model using the GAMS code provided in the `tests` folder
-        scen.solve(model=str(solve / 'transport_ixmp'),
+        scen.solve(model=str(Path(solve) / 'transport_ixmp'),
                    case='transport_standard')
 
     return scen
