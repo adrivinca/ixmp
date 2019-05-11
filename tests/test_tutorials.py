@@ -60,7 +60,6 @@ def _notebook_run(nb_path, tmp_path, env=os.environ, kernel=None):
     return nb, errors
 
 
-#@pytest.mark.skip_win_ci
 def test_py_transport(tutorial_path, tmp_path, tmp_env):
     fname = tutorial_path / 'transport' / 'py_transport.ipynb'
     nb, errors = _notebook_run(fname, tmp_path, tmp_env)
@@ -71,7 +70,6 @@ def test_py_transport(tutorial_path, tmp_path, tmp_env):
     assert np.isclose(obs, exp)
 
 
-#@pytest.mark.skip_win_ci
 def test_py_transport_scenario(tutorial_path, tmp_path, tmp_env):
     fname = tutorial_path / 'transport' / 'py_transport_scenario.ipynb'
     nb, errors = _notebook_run(fname, tmp_path, tmp_env)
