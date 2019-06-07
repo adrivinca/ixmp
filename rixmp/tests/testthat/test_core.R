@@ -1,6 +1,6 @@
 context("Core")
 
-# Simulate 'library(retixmp)' without installing
+# Simulate 'library(rixmp)' without installing
 devtools::load_all(file.path('..', '..'))
 
 # Import fixtures
@@ -18,7 +18,7 @@ test_that('set, mapping sets and par values can be set on a Scenario', {
   # details for creating a new scenario in the ix modeling platform         
   model <- "test_model" 
   scenario  <- "standard"
-  annot <- "scenario for testing retixmp" 
+  annot <- "scenario for testing rixmp" 
   
   # initialize a new ixmp.Scenario
   # the parameter version='new' indicates that this is a new scenario instance
